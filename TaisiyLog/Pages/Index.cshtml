@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Severity</th>
+                <th>Last updated</th>
+                <th>Log message</th>
+                <th>Origin</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var LogItem in Model.LogItems)
+            {
+                <tr>
+                    <td>@LogItem.Severity</td>
+                    <td>@LogItem.LastUpdated</td>
+                    <td>@LogItem.LogMessage</td>
+                    <td>@LogItem.Origin</td>
+                </tr>
+            }
+        </tbody>
+        </table>
+    </div>
