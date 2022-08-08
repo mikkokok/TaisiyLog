@@ -26,11 +26,6 @@ namespace TaisiyLog.Pages
 
         }
 
-        public void OnPost(LogItem logItem)
-        {
-            logItems.Add(logItem);
-        }
-
         public void OnDelete()
         {
             logItems.Clear();
